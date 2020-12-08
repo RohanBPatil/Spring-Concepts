@@ -17,6 +17,10 @@ public class SpringConceptsApplication {
 		ApplicationContext context = SpringApplication.run(SpringConceptsApplication.class, args);
 		DemoBean demoBean = context.getBean(DemoBean.class);
 		logger.info("DemoBean = " + demoBean.toString());
+		EmployeeBean employeeBean = context.getBean(EmployeeBean.class);
+		employeeBean.setEid(8);
+		employeeBean.setEname("Spring Capgemini");
+		employeeBean.showEmployeeDetails();
 	}
 
 }
